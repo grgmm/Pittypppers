@@ -128,15 +128,17 @@ function Form_Prueba_usuario_nuevo_crea()
     
   //$this->withoutExceptionhandling();
 
-$this->from('usuarios/nuevo')->post('/usuarios/crear',['name'=>'test-borrame1',
-'email'=>'borrame1@gmail.com',
+$this->from('usuarios/nuevo')->post('/usuarios/crear',['name'=>'test-borrame11',
+'email'=>'borrame11@gmail.com',
 'password'=>'123456',])->assertRedirect('usuarios');
 
 //->assertSee('PROCESANDO INFORMACION.....');
 
 
-    $this->assertDatabasehas('users',['name'=>'test-borrame1',
-'email'=>'borrame1@gmail.com',
+
+
+    $this->assertDatabasehas('users',['name'=>'test-borrame11',
+'email'=>'borrame11@gmail.com',
 //'password'=>'123456',
 
 ]);
